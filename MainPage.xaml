@@ -7,17 +7,17 @@
     Title="SkiaSharp Warnings">
 
     <VerticalStackLayout
-        HorizontalOptions="Center"
-        VerticalOptions="Center">
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill"
+        BackgroundColor="Chartreuse">
 
         <controls:SKLottieView
-            Source="dotnetbot.json"
-            IsVisible="True"
+            Source="Lottie/dotnetbot.json"
+            AnimationCompleted="OnAnimationCompleted"
+            AnimationFailed="OnAnimationFailed"
+            AnimationLoaded="OnAnimationLoaded"
             IsAnimationEnabled="True" />
-
-        <!--  AnimationCompleted="OnAnimationCompleted"  -->
-        <!--  AnimationFailed="OnAnimationFailed"  -->
-        <!--  AnimationLoaded="OnAnimationLoaded"  -->
+        <!--  IsAnimationEnabled="True" />  -->
         <!--  Progress="{Binding Progress}"  -->
         <!--  Duration="{Binding Duration}" />  -->
 
