@@ -1,24 +1,31 @@
-﻿namespace SkiaSharp_TrimWarnings_3._116._0;
+﻿using System.Diagnostics;
+using SkiaSharp.Extended.UI.Controls;
+
+namespace SkiaSharp_TrimWarnings_3._116._0;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
+	
 	public MainPage()
 	{
 		InitializeComponent();
+		
+		BindingContext = this;
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private void OnAnimationFailed(object sender, SKLottieAnimationFailedEventArgs e)
 	{
-		count++;
+		Debug.WriteLine($"Failed to load Lottie animation: {e.Exception}");
+	}
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+	private void OnAnimationLoaded(object sender, SKLottieAnimationLoadedEventArgs e)
+	{
+		Debug.WriteLine($"Lottie animation loaded: {e.Size}; {e.Duration}; {e.Fps}");
+	}
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
+	private void OnAnimationCompleted(object sender, EventArgs e)
+	{
+		Debug.WriteLine("Lottie animation finished playing.");
 	}
 }
 
