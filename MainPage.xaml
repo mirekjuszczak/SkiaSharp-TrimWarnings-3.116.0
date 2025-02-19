@@ -19,20 +19,6 @@
             Source="Lottie/dotnetbot.json"
             IsAnimationEnabled="True"
             RepeatCount="-1"/>
-        
-            <!-- AnimationCompleted="OnAnimationCompleted" -->
-            <!-- AnimationFailed="OnAnimationFailed" -->
-            <!-- AnimationLoaded="OnAnimationLoaded" -->
-            <!-- IsAnimationEnabled="True" /> -->
-        <!--  IsAnimationEnabled="True" />  -->
-        <!--  Progress="{Binding Progress}"  -->
-        <!--  Duration="{Binding Duration}" />  -->
-
-        <!--  <Image  -->
-        <!--  Source="dotnet_bot.png"  -->
-        <!--  Aspect="AspectFit"  -->
-        <!--  HeightRequest="185"  -->
-        <!--  SemanticProperties.Description="dot net bot in a hovercraft number nine" />  -->
     </VerticalStackLayout>
 
 </ContentPage>
